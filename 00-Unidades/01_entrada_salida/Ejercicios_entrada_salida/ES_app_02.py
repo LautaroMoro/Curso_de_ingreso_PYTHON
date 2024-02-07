@@ -27,7 +27,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = self.btn_.get()
+        alert("Titulo", edad)
+        
         
         
     
