@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Lautaro
+apellido:Moro
 ---
 TP: ES_Facturaciones
 ---
@@ -52,13 +52,59 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
-        pass
+        importe_de_1= self.txt_importe_1.get()
+
+        importe_de_2 = self.txt_importe_2.get()
+
+        importe_de_3 = self.txt_importe_3.get()
+
+        importe_uno_float = float(importe_de_1)
+
+        importe_dos_float = float(importe_de_2)
+
+        importe_tres_float = float(importe_de_3)
+
+        suma_de_importes = importe_uno_float + importe_dos_float + importe_tres_float
+
+        alert("IMPORTE FINAL", f"SU IMPORTE TOTAL ES ESTE: {suma_de_importes}")
+
 
     def btn_promedio_on_click(self):
-        pass
+
+        importe_de_1= self.txt_importe_1.get()
+
+        importe_de_2 = self.txt_importe_2.get()
+
+        importe_de_3 = self.txt_importe_3.get()
+
+        importe_uno_float = float(importe_de_1)
+
+        importe_dos_float = float(importe_de_2)
+
+        importe_tres_float = float(importe_de_3)
+
+        suma_de_importes = importe_uno_float + importe_dos_float + importe_tres_float
+
+        promedio_de_importes = suma_de_importes / 3
+
+        alert("Promedio", f"El promedio de los tres importes es de : {promedio_de_importes}")
+
 
     def btn_total_iva_on_click(self):
-        pass      
+        total_iva = 0.21
+
+        importe_de_1= self.txt_importe_1.get()
+        importe_de_2 = self.txt_importe_2.get()
+        importe_de_3 = self.txt_importe_3.get()
+        importe_uno_float = float(importe_de_1)
+        importe_dos_float = float(importe_de_2)
+        importe_tres_float = float(importe_de_3)
+
+        suma_de_importes = importe_uno_float + importe_dos_float + importe_tres_float
+        importes_con_iva = suma_de_importes * total_iva 
+        importe_final = suma_de_importes + importes_con_iva
+        
+        alert("UTN", f"El importe final es de: {importe_final}, teniendo en cuenta el IVA del 21%")
     
 if __name__ == "__main__":
     app = App()

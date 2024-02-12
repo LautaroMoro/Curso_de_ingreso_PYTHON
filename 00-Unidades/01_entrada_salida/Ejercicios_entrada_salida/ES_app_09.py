@@ -37,7 +37,8 @@ class App(customtkinter.CTk):
 
         sueldo = float(sueldo)
 
-        sueldo_final = sueldo * 15 / 100
+        sueldo_final = sueldo * 0.15
+        sueldo_final = sueldo + sueldo_final
 
         alert("Titulo", "El sueldo, contando el incremento del %15 es de: " + str(sueldo_final))
 

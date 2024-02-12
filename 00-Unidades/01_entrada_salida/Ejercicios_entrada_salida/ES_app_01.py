@@ -26,7 +26,26 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        alert("Titulo", "Esto no anda, funciona")
+        dolar_oficial = prompt("Dolar oficial", "INGRESE EL VALOR ACTUAL DEL DOLAR OFICIAL")
+
+        dolar_blue = prompt("Dolar blue", "INGRESE EL VALOR ACTUAL DEL DOLAR BLUE")
+
+        dolar_oficial = float(dolar_oficial)
+
+        dolar_blue = float(dolar_blue)
+
+        diferencia_de_cotizaciones = (dolar_blue - dolar_oficial)
+
+        porcentaje = (diferencia_de_cotizaciones / dolar_oficial)
+        
+        porcentaje = (porcentaje * 100)
+
+        alert("Cotizaciones", f"La diferencia de cotizaciones entre el dolar blue y el oficial es del : {porcentaje}%")
+
+        
+
+        
+
 
 
 if __name__ == "__main__":
