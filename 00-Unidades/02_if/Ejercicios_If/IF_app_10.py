@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre:Lautaro
+apellido:Moro
 ---
 Ejercicio: if_10
 ---
@@ -40,7 +40,7 @@ class App(customtkinter.CTk):
         elif numero_randomm >= 6:
            alert ("UTN", f"Promoción directa!, la nota es {numero_randomm}") 
 
-        alert("Notas del parcial", numero_randomm)    
+           
             
 
 if __name__ == "__main__":

@@ -48,12 +48,30 @@ class App(customtkinter.CTk):
         self.btn_convertir_f_c.grid(row=4, pady=10, columnspan=2, sticky="nsew")
     
     def btn_convertir_c_f_on_click(self):
-        pass
 
+        centigrados = self.txt_temperatura_c.get()
+        centigrados = float(centigrados)
+
+        conversion_c_f = self.btn_convertir_c_f
+
+        conversion_c_f = (centigrados * 9 / 5) + 32
+        farenheit_round = round(conversion_c_f, 1)
+
+        alert("UTN", f"({centigrados} * 9 / 5) + 32 = {farenheit_round}")
+        
     def btn_convertir_f_c_on_click(self):
-        pass
-    
-    
+        farenheit = self.txt_temperatura_f.get()
+        farenheit = float(farenheit)
+
+        conversion_f_c = self.btn_convertir_f_c
+
+        conversion_f_c = (farenheit - 32) * 5 / 9
+        centigrados_round = round(conversion_f_c, 1)
+
+        alert("UTN", f"({farenheit} - 32) * 5 / 9  = {centigrados_round}")
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

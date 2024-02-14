@@ -91,8 +91,9 @@ class App(customtkinter.CTk):
 
 
     def btn_total_iva_on_click(self):
+        total_iva = self.btn_total_iva
         total_iva = 0.21
-
+        
         importe_de_1= self.txt_importe_1.get()
         importe_de_2 = self.txt_importe_2.get()
         importe_de_3 = self.txt_importe_3.get()
