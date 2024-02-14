@@ -1,4 +1,5 @@
 import tkinter
+import math
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
@@ -54,7 +55,7 @@ class App(customtkinter.CTk):
 
         peso_maximo_por_camion = 3500
 
-        cantidad_camiones = round(toneladas_float / peso_maximo_por_camion)
+        cantidad_camiones = math.ceil(toneladas_float / peso_maximo_por_camion)
 
         alert("CAMIONESS", f"La cantidad requerida de camiones para transportar los materiales es de : {cantidad_camiones}. Teniendo en cuenta que el peso maximo de los mismos es de 3500kg")
 
